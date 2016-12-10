@@ -1,9 +1,9 @@
-# date_mod.rb - extention for DateTime#new method.
+# date_ext.rb - extention for DateTime#new method.
 #
-# Author: Y.Ogawa 2009
+# Author: geminoa@gmail.com
 #
 # == Overview
-# DateTime#new_mod method enables developers to create the 
+# DateTime#new_ext method enables developers to create the 
 # DateTime oject from invalid parameters of range.
 # 
 # == Examples of use
@@ -17,7 +17,7 @@
 require 'date'
 
 class DateTime
-  def DateTime.new_mod(year=nil, month=nil, day=nil, hour=nil, min=nil, sec=nil, offset=nil)
+  def DateTime.new_ext(year=nil, month=nil, day=nil, hour=nil, min=nil, sec=nil, offset=nil)
     params = {
       :year => year, :month => month, :day => day, 
       :hour => hour, :min => min, :sec => sec, :offset => offset
@@ -73,6 +73,6 @@ class DateTime
   end
 
   def DateTime.mnew(year=nil, month=nil, day=nil, hour=nil, min=nil, sec=nil, offset=nil)
-    new_mod(year, month, day, hour, min, sec, offset)
+    new_ext(year, month, day, hour, min, sec, offset)
   end
 end
